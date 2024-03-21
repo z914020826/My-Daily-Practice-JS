@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DailyStudy</title>
+    <style>
+      .parent {
+        width: 500px;
+        height: 500px;
+        background-color: tomato;
+        /* display: grid; */
+      }
+
+      .child {
+        width: 200px;
+        height: 200px;
+        background-color: deepskyblue;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .left {
+        width: 100px;
+        background-color: #f0f0f0; /* 为了可视化 */
+      }
+
+      .center {
+        flex-grow: 1;
+        background-color: #e0e0e0; /* 为了可视化 */
+      }
+
+      .right {
+        width: 200px;
+        background-color: #d0d0d0; /* 为了可视化 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>JavaScript</h1>
+    <h2>DailyStudy</h2>
+    <h2>by:YiHang</h2>
+    <ul class="ul">
+      <li><a href="/page1">page1</a></li>
+      <li><a href="/page2">page2</a></li>
+    </ul>
+    <div id="route-view"></div>
+
+    <div>
+      <span></span>
+    </div>
+    <div class="container">
+      <div class="left">左侧内容</div>
+      <div class="center">中间内容</div>
+      <div class="right">右侧内容</div>
+    </div>
+  </body>
+  <script src="./practice.js"></script>
+  <!-- <script src="./debounce.js"></script> -->
+  <script></script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>导出字符串为TXT文件</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button onclick="exportTextToFile()">导出文本</button>
+
+    <script>
+      function exportTextToFile() {
+        const input = document.querySelector("input");
+        // 要导出的字符串
+        var textToExport = "这是要导出的文本内容。\n这是第二行。\n这是第三行。";
+
+        // 创建一个新的Blob对象，指定MIME类型为文本
+        var blob = new Blob([input.value], {
+          type: "text/plain;charset=utf-8",
+        });
+
+        // 创建一个指向该Blob的URL
+        var downloadUrl = URL.createObjectURL(blob);
+
+        // 创建一个<a>元素用于下载
+        var a = document.createElement("a");
+        a.href = downloadUrl;
+
+        a.download = "example.txt"; // 设置下载文件的默认名称
+        document.body.appendChild(a);
+
+        // 触发下载
+        a.click();
+
+        // 清理：移除<a>元素和释放URL对象
+        document.body.removeChild(a);
+        URL.revokeObjectURL(downloadUrl);
+      }
+    </script>
+  </body>
+</html>

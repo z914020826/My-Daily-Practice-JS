@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>单例模式弹框</title>
+  </head>
+  <style>
+    #modal {
+      height: 200px;
+      width: 200px;
+      line-height: 200px;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <button id="open">打开弹框</button>
+    <button id="close">关闭弹框</button>
+  </body>
+  <script>
+    class Modal {
+      constructor() {
+        if (!Modal.instance) {
+          Modal.instance = document.createElement("div");
+          Modal.instance.id = "modal";
+          Modal.instance.innerHTML = "我是弹框";
+          document.body.appendChild(Modal.instance);
+        }
+        return Modal.instance;
+      }
+    }
+    document.getElementById("open").onclick = function () {
+      let modal = new Modal();
+      modal.style.display = "block";
+    };
+    document.getElementById("close").onclick = function () {
+      let modal = new Modal();
+      modal.style.display = "none";
+    };
+  </script>
+</html>

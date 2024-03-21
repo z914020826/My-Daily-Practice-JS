@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拖拽效果展示</title>
+    <style>
+      section {
+        width: 1000px;
+        height: 360px;
+        margin: 100px auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      h1 {
+        text-align: center;
+      }
+      .choice {
+        width: 200px;
+        height: 90%;
+        padding: 20px;
+        margin: 10px;
+        background-color: #fafafa;
+        box-sizing: border-box;
+      }
+      .choice p {
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        background-color: red;
+        color: #fff;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>拖拽效果展示</h1>
+    <section>
+      <div class="choice">
+        <p draggable="true">Vue</p>
+        <p draggable="true">React</p>
+        <p draggable="true">Uniapp</p>
+        <p draggable="true">Node</p>
+        <p draggable="true">Nest</p>
+        <p draggable="true">Next</p>
+      </div>
+      <div class="choice"></div>
+      <div class="choice"></div>
+      <div class="choice"></div>
+      <div class="choice"></div>
+    </section>
+    <script>
+      const p = document.querySelectorAll("p");
+      const choice = document.querySelectorAll(".choice");
+      for (const pElement of p) {
+        pElement.addEventListener("dragstart", dragStart);
+        pElement.addEventListener("dragend", dragEnd);
+      }
+      let dragItem = null;
+      function dragStart() {
+        dragItem = this;
+        setTimeout(() => (this.style.display = "none"));
+      }
+      function dragEnd() {
+        dragItem = null;
+        setTimeout(() => (this.style.display = "block"));
+      }
+      for (const choiceElement of choice) {
+        // 拖拽目标元素
+        choiceElement.addEventListener("dragover", dragOver);
+        // 拖拽目标元素进入
+        choiceElement.addEventListener("dragenter", dragEnter);
+        // 拖拽目标元素离开
+        choiceElement.addEventListener("dragleave", dragLeave);
+        // 拖拽目标元素放置
+        choiceElement.addEventListener("drop", dragDrop);
+      }
+      function dragOver(e) {
+        e.preventDefault();
+      }
+      function dragEnter(e) {
+        // 阻止默认行为
+        e.preventDefault();
+        // 添加边框
+        this.style.border = "2px dashed red";
+      }
+      function dragLeave() {
+        this.style.border = "none";
+      }
+      function dragDrop() {
+        this.style.border = "none";
+        this.append(dragItem);
+      }
+    </script>
+  </body>
+</html>
