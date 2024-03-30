@@ -34,4 +34,4 @@ function traverseElRoot(elRoot) {
   traverse(elRoot, 0);
   return result;
 }
-console.log(traverseElRoot(tree));
+console.log(traverseElRoot());

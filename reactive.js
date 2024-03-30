@@ -61,3 +61,9 @@ function reactive(data) {
     },
   });
 }
+let obj = { a: 1, b: 2 };
+let proxy = reactive(obj);
+effect(() => {
+  console.log("effect", proxy.a);
+});
+proxy.a = 2;
