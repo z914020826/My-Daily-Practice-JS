@@ -26,6 +26,7 @@ async function asyncPool(poolLimit, array, iteratorFn) {
     }
   }
   // 所有任务都执行完毕
+  return Promise.all(ret);
 }
 
 asyncPool(4, [1, 2, 3, 4, 5, 6], (item) => {
