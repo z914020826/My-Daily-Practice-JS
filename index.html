@@ -39,10 +39,48 @@
         width: 200px;
         background-color: #d0d0d0; /* 为了可视化 */
       }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .title {
+        flex-grow: 1;
+        text-align: center;
+      }
+
+      .login {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+    <style>
+      .triangle {
+        width: 0;
+        height: 0;
+        /* border-top: 50px solid transparent; */
+        border-right: 100px solid transparent;
+        border-top: 100px solid red;
+      }
     </style>
   </head>
 
   <body>
+    <h1>Header布局</h1>
+    <div class="header">
+      <div class="logo">LOGO</div>
+      <div class="title">Website Title</div>
+      <div class="login">Login</div>
+    </div>
     <h1>JavaScript</h1>
     <h2>DailyStudy</h2>
     <h2>by:YiHang</h2>

@@ -22,7 +22,7 @@ let tree = document.querySelector(".a");
 // }
 function traverseElRoot(elRoot) {
   const result = [];
-  function traverse(element, level) {
+  function traverse(element, level = 0) {
     if (!result[level]) {
       result[level] = [];
     }
@@ -31,7 +31,7 @@ function traverseElRoot(elRoot) {
       traverse(child, level + 1);
     });
   }
-  traverse(elRoot, 0);
+  traverse(elRoot);
   return result;
 }
 console.log(traverseElRoot());
