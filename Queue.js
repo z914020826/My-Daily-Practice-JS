@@ -54,3 +54,19 @@ console.log(queue.peek());
 queue.clear();
 console.log(queue.isEmpty());
 console.log(queue.peek());
+
+// 击鼓传花
+function passGame(names, num) {
+  const queue = new Queue();
+  for (const name of names) {
+    queue.enqueue(name);
+  }
+  while (queue.size() > 1) {
+    for (let i = 0; i < num; i++) {
+      queue.enqueue(queue.dequeue());
+    }
+    queue.dequeue();
+  }
+  return queue.peek();
+}
+console.log(passGame(["a", "b", "c", "d", "e"], 3));
