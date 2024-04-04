@@ -5,9 +5,11 @@ function makeTree(paths) {
     const pathArr = path.split("/");
     let current = tree;
     pathArr.forEach((dir) => {
+      // 如果当前目录不存在，则创建
       if (!current[dir]) {
         current[dir] = {};
       }
+      // 进入下一级
       current = current[dir];
     });
   });
