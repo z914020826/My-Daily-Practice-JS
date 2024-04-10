@@ -40,7 +40,7 @@
         background-color: #d0d0d0; /* 为了可视化 */
       }
       .header {
-        display: flex;
+        display: inline-flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
@@ -72,9 +72,38 @@
         border-top: 100px solid red;
       }
     </style>
+    <style>
+      .rainbow {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+
+        background: radial-gradient(
+            #fff 80px,
+            #6d35a6 80px,
+            #6d35a6 90px,
+            #00a8fe 90px,
+            #00a8fe 100px,
+            #98d6ec 100px,
+            #98d6ec 110px,
+            #91cf42 110px,
+            #91cf42 120px,
+            #ffff00 120px,
+            #ffff00 130px,
+            #ffa03d 130px,
+            #ffa03d 140px,
+            #fd2000 140px,
+            #fd2000 150px,
+            transparent 150px
+          )
+          no-repeat 0 150px/300px 299px;
+      }
+    </style>
   </head>
 
   <body>
+    <div class="rainbow"></div>
+
     <h1>Header布局</h1>
     <div class="header">
       <div class="logo">LOGO</div>
