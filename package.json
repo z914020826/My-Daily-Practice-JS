@@ -1,15 +1,25 @@
 {
-  "name": "js-toolkit",
+  "name": "@yihang/js-kit",
   "version": "1.0.0",
-  "description": "JavaScript toolkit covering polyfills, utilities, design patterns, framework internals, algorithms, and data structures",
-  "main": "src/index.js",
+  "description": "A long-lasting JavaScript toolkit — polyfills, utilities, design patterns, framework internals, algorithms, and data structures",
   "type": "module",
+  "main": "src/index.js",
+  "types": "src/types/index.d.ts",
+  "exports": {
+    ".": "./src/index.js",
+    "./polyfills": "./src/polyfills/index.js",
+    "./utils": "./src/utils/index.js",
+    "./patterns": "./src/patterns/index.js",
+    "./framework": "./src/framework/index.js",
+    "./algorithms": "./src/algorithms/index.js",
+    "./data-structures": "./src/data-structures/index.js",
+    "./dom": "./src/dom/index.js",
+    "./javascript": "./src/javascript/index.js",
+    "./types": "./src/types/index.d.ts"
+  },
   "files": [
     "src/"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "javascript",
     "toolkit",
@@ -17,9 +27,19 @@
     "algorithms",
     "design-patterns",
     "utilities",
-    "data-structures"
+    "data-structures",
+    "debounce",
+    "throttle",
+    "deep-clone",
+    "promise",
+    "sorting",
+    "curry"
   ],
   "author": "YiHang",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yihang/js-kit.git"
+  },
   "packageManager": "pnpm@10.17.1"
 }

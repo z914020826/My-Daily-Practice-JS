@@ -1,2 +1,4 @@
-practice.js
-index.html
+node_modules/
+*.log
+.DS_Store
+.claude

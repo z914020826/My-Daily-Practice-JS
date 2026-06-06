@@ -1,5 +1,9 @@
 // ========== Polyfills (手写系列) ==========
 export {
+  myCall,
+  myApply,
+  myBind,
+  applyPolyfills,
   myNew,
   deepClone,
   deepFreeze,

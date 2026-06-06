@@ -1,4 +1,4 @@
-import "./call.js";
+export { myCall, myApply, myBind, applyPolyfills } from "./call.js";
 export { default as myNew } from "./new.js";
 export { default as deepClone } from "./deepClone.js";
 export { default as deepFreeze } from "./deepFreeze.js";

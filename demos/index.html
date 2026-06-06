@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DailyStudy</title>
+    <style>
+      .parent {
+        width: 500px;
+        height: 500px;
+        background-color: tomato;
+        /* display: grid; */
+      }
+
+      .child {
+        width: 200px;
+        height: 200px;
+        background-color: deepskyblue;
+        margin: auto;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .left {
+        width: 100px;
+        background-color: #f0f0f0; /* 为了可视化 */
+      }
+
+      .center {
+        flex-grow: 1;
+        background-color: #e0e0e0; /* 为了可视化 */
+      }
+
+      .right {
+        width: 200px;
+        background-color: #d0d0d0; /* 为了可视化 */
+      }
+      .header {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .title {
+        flex-grow: 1;
+        text-align: center;
+      }
+
+      .login {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+    <style>
+      .triangle {
+        width: 0;
+        height: 0;
+        /* border-top: 50px solid transparent; */
+        border-right: 100px solid transparent;
+        border-top: 100px solid red;
+      }
+    </style>
+    <style>
+      .rainbow {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+
+        background: radial-gradient(
+            #fff 80px,
+            #6d35a6 80px,
+            #6d35a6 90px,
+            #00a8fe 90px,
+            #00a8fe 100px,
+            #98d6ec 100px,
+            #98d6ec 110px,
+            #91cf42 110px,
+            #91cf42 120px,
+            #ffff00 120px,
+            #ffff00 130px,
+            #ffa03d 130px,
+            #ffa03d 140px,
+            #fd2000 140px,
+            #fd2000 150px,
+            transparent 150px
+          )
+          no-repeat 0 150px/300px 299px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="rainbow"></div>
+
+    <h1>Header布局</h1>
+    <div class="header">
+      <div class="logo">LOGO</div>
+      <div class="title">Website Title</div>
+      <div class="login">Login</div>
+    </div>
+    <h1>JavaScript</h1>
+    <h2>DailyStudy</h2>
+    <h2>by:YiHang</h2>
+    <ul class="ul">
+      <li><a href="/page1">page1</a></li>
+      <li><a href="/page2">page2</a></li>
+    </ul>
+    <div id="route-view"></div>
+
+    <div>
+      <span></span>
+    </div>
+    <div class="container">
+      <div class="left">左侧内容</div>
+      <div class="center">中间内容</div>
+      <div class="right">右侧内容</div>
+    </div>
+    <img
+      src="	https://prod-chat-kimi.tos-s3-cn-beijing.volces.co…feee3fa2144d1227d4ff64c1226c721daa35d74c506c3a2a1"
+      alt=""
+    />
+    <div id="box1">
+      <div id="box2" style="">content</div>
+    </div>
+    <div id="app"></div>
+    <div class="a">
+      <p>11</p>
+      <span>
+        123
+        <span>456</span>
+      </span>
+      <p>22</p>
+      <span>
+        123
+        <span>456</span>
+      </span>
+    </div>
+  </body>
+  <script src="./practice.js"></script>
+  <!-- <script src="./debounce.js"></script> -->
+  <script></script>
+</html>
