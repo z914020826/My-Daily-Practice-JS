@@ -1,5 +1,5 @@
 {
-  "name": "@yihang/js-kit",
+  "name": "@zhouyihang/js-kit",
   "version": "1.0.0",
   "description": "A long-lasting JavaScript toolkit — polyfills, utilities, design patterns, framework internals, algorithms, and data structures",
   "type": "module",
