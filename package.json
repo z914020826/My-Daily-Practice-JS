@@ -1,13 +1,25 @@
 {
-  "name": "My-Daily-Practice-JS",
+  "name": "js-toolkit",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "JavaScript toolkit covering polyfills, utilities, design patterns, framework internals, algorithms, and data structures",
+  "main": "src/index.js",
+  "type": "module",
+  "files": [
+    "src/"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "javascript",
+    "toolkit",
+    "polyfills",
+    "algorithms",
+    "design-patterns",
+    "utilities",
+    "data-structures"
+  ],
+  "author": "YiHang",
   "license": "ISC",
   "packageManager": "pnpm@10.17.1"
 }
